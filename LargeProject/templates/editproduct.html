@@ -1,0 +1,60 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="container">
+  <div class="jumbotron" style="color:white">
+
+<h1>Edit Your Product</h1>
+<br>
+<form  method="POST" enctype="multipart/form-data">
+{{form.hidden_tag()}}
+{{form.accesscode.label}}
+<br>
+<br>
+{{form.accesscode}}
+<br>
+<br>
+{{form.name.label}}
+<br>
+{{form.name (placeholder="Shoe")}}
+<br>
+{{form.shoetype.label}}
+<br>
+{{form.shoetype}}
+<br>
+{{form.condition.label}}<br>
+{{form.condition}}
+<br>
+{{form.description.label}}
+<br>
+{{form.description}}
+ <br>
+{{form.gender.label}}
+<br>
+{{form.gender}}
+{{form.size.label}}
+<br>
+{{form.size}}
+<br>
+{{form.price.label}}
+<br>
+{{form.price(value="$")}}
+<br>
+{{form.quantity.label}}
+<br>
+{{form.quantity(value = 1)}}
+<br>
+{{form.file.label}}
+<br>
+{{form.file}}
+<br>
+{{form.contact.label}}
+<br>
+{{form.contact(placeholder="xyz@gmail.com", type = "email")}}
+<br>
+<br>
+{{form.submit}}
+
+</form>
+</div>
+</div>
+{%endblock%}

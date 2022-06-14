@@ -1,0 +1,43 @@
+{% extends "base.html"%}
+{% block content %}
+<div class="container" style= "color:white">
+  <div class="jumbotron">
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>See All Our Products:</h1>
+    <h2>Filtered By: Most Recent</h2>
+    <br>
+    <table>
+      <tr>
+    {% for shoe in allshoes %}
+    {% if shoe.quantity >0 %}
+    <td>
+      <div class="card text-white bg-dark mb-3" style="width:20rem; margin:33px">
+        <img src="../static/{{shoe.filename}}" class="card-img-top" alt="...">
+        <div class="card-body" style = "text-align:center">
+          <h3 class="card-title">{{shoe.name}}</h3>
+          <h4>Condition: {{shoe.condition}}</h4>
+          <h4>{{shoe.shoetype}}</h4>
+          <h4>Size: {{shoe.size}} {{gender}}</h4>
+          <h3>{{shoe.price}}</h3>
+          <p class="card-text">{{shoe.description}} <br> <strong>{{shoe.quantity}} left in stock</strong></p>
+          <div class="col text-center">
+         <a href="{{ url_for('shopall') +"/" + shoe.productID|string }}" class="btn btn-primary">Buy</a>
+          </div>
+        </div>
+      </div>
+      </td>
+      {%endif%}
+      {%if loop.index % 3 == 0%}
+      </tr>
+      <tr>
+      {%endif%}
+    {% endfor %}
+        </table>
+  </div>
+
+</div>
+{% endblock %}

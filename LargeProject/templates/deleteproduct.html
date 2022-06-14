@@ -1,0 +1,21 @@
+{% extends 'base.html'%}
+{% block content%}
+<div class="container">
+  <div class="jumbotron" style="color:white">
+
+<h1>Delete Your Product</h1>
+<br>
+<form  method="POST">
+{{form.hidden_tag()}}
+{{form.accesscode.label}}
+<br>
+<br>
+{{form.accesscode}}
+<br>
+<br>
+{{form.submit}}
+
+</form>
+</div>
+</div>
+{%endblock%}

@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container" style="color:white">
+<div class="jumbotron">
+  <br>
+  <br>
+  <br>
+  <br>
+  <h1>Post your pair of shoes!</h1>
+  <br>
+  <form  method="POST" enctype="multipart/form-data">
+    {{form.hidden_tag()}}
+    {{form.name.label}}
+    <br>
+    {{form.name (placeholder="Shoe")}}
+    <br>
+    {{form.shoetype.label}}
+    <br>
+    {{form.shoetype}}
+    <br>
+    {{form.condition.label}}<br>
+    {{form.condition}}
+    <br>
+    {{form.description.label}}
+    <br>
+    {{form.description}}
+     <br>
+    {{form.gender.label}}
+    <br>
+    {{form.gender}}
+    {{form.size.label}}
+    <br>
+    {{form.size}}
+    <br>
+    {{form.price.label}}
+    <br>
+    {{form.price(value="$")}}
+    <br>
+    {{form.quantity.label}}
+    <br>
+    {{form.quantity(value = 1)}}
+    <br>
+    {{form.file.label}}
+    <br>
+    {{form.file}}
+    <br>
+    {{form.contact.label}}
+    <br>
+    {{form.contact(placeholder="xyz@gmail.com", type = "email")}}
+    <br>
+    {{form.accesscode.label}}
+    <br>
+    {{form.accesscode(type = "password")}}
+    <br>
+    <br>
+    {{form.submit}}
+  </form>
+
+</div>
+</div>
+<!--
+      <div class = 'container'>
+        <br>
+        <br>
+        <br>
+        <br>
+        <form action="{{url_for('confirmation')}}" method="get">
+          <label for="shoeName">Shoe Name</label>
+          <br>
+          <input type="text" name="shoeName" id= "shoeNameTag" placeholder="Nike AF1">
+          <br>
+          <br>
+          <label for="shoetype">Shoetype:</label>
+          <br>
+          <select name = "shoetype" required>
+            <option value ="1">Lifestyle</option>
+            <option value="2">Sports</option>
+          </select>
+          <br>
+          <br>
+          <label for="desc">Add a description:</label>
+          <br>
+          <input type="desc" id= "desctag"name="desc" placeholder="Add your description" required>
+          <br>
+          <br>
+
+          <label for="male">Mens:</label>
+          <input type ="radio" id="male" name="shoe_choice" value="male" required>
+          <label for="female">Womens:</label>
+          <input type ="radio" id="female" name="shoe_choice" value="female" required>
+          <br>
+          <br>
+          <label for="shoesize">Size:</label>
+          <br>
+          <select name = "shoesize" id = 'shoesize' required>
+            <option value ="6">6</option>
+            <option value ="6.5">6.5</option>
+            <option value ="7">7</option>
+            <option value ="7.5">7.5</option>
+            <option value ="8">8</option>
+            <option value ="8.5">8.5</option>
+            <option value ="9">9</option>
+            <option value ="9.5">9.5</option>
+            <option value ="10">10</option>
+            <option value ="10.5">10.5</option>
+            <option value ="11">11</option>
+            <option value ="11.5">11.5</option>
+            <option value ="12">12</option>
+            <option value ="12.5">12.5</option>
+            <option value ="13">13</option>
+            <option value ="13.5">13.5</option>
+          </select>
+          <br>
+          <br>
+          <label for ="shoeimg"> Attach an image of your product.</label>
+          <br>
+          <input type="file" id="shoeimg" name ="shoeimg" accept = "image/png, image/jpeg" required>
+          <br>
+          <br>
+          <input type ="submit" value="Submit">
+      </form>
+      </div>
+      -->
+  {% endblock %}

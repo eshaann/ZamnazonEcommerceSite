@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+<br>
+<br>
+<div class="card-group">
+<div class="card text-white bg-dark mb-3" style="width: 18rem;">
+  <img src="../static/lifestyle.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Lifestyle</h5>
+    <p class="card-text">Everyday wear, perfect for casual setting</p>
+  </div>
+</div>
+<div class="card text-white bg-dark mb-3" style="width:18rem;">
+  <img src="../static/sports.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Sports</h5>
+    <p class="card-text">Stamp out the competitors with your drip from our collection</p>
+    <div class="col text-center">
+    <a href="{{ url_for('shopall') }}" class="btn btn-primary">Shop All</a>
+    </div>
+  </div>
+</div>
+<div class="card text-white bg-dark mb-3" style="width:18rem;">
+  <img src="../static/dress.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Dress</h5>
+    <p class="card-text">They Drippy</p>
+
+  </div>
+</div>
+
+</div>
+{% endblock %}

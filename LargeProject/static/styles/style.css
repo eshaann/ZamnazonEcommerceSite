@@ -1,0 +1,40 @@
+.navbar-nav{
+    color:white;
+}
+
+#myVideo{
+    position:fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.person h1{
+    font-size: 70px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.person h4{
+    font-size: 20px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.description{
+    width:700px;
+    padding-left: 60px;
+}
+
+.person{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:1200px;
+    max-width: 95%;
+    margin-right:auto;
+    padding-bottom: 20px;
+}

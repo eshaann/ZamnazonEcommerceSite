@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+  <h2 style = "color:white">Sign Up and Login Coming Soon!</h2>
+  <form action = "{{url_for('thankyou')}}" method="get" style="color:white">
+      <label for="firstnametag">First Name</label>
+      <br>
+        <input type="text" id='firstnametag'name="firstname" placeholder="John" required>
+        <br>
+        <label for="firstnametag">Last Name</label>
+        <br>
+          <input type="text" id='lastnametag'name="lastname" placeholder="Doe" required>
+          <br>
+      <label for="emailtag">Email:</label>
+      <br>
+      <input type="email" id= "emailtag"name="email" placeholder="email" required>
+      <br>
+      <label for="emailtag">Password:</label>
+      <br>
+      <input type="password" id= "pwdtag"name="password" placeholder="password" required>
+      <br>
+      <label for="termstag">Do You Agree to Our <a href="#">Terms of Service</a></label>
+      <input type="checkbox" id = 'termstag'name="terms" value="terms" required>
+      <br>
+      <br>
+      <input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+  <br>
+  <p style="color:white"><strong>OR</strong></p>
+  <br>
+    <h2 style="color:white">Login</h2>
+    <form action="{{url_for('loggedinhome')}}" method="get" style="color:white">
+        <label for="emailtag">Email:</label>
+        <br>
+        <input type="email" id= "logemailtag"name="logemail" placeholder="email">
+        <br>
+        <label for="emailtag">Password:</label>
+        <br>
+        <input type="password" id= "logpwdtag"name="logpassword" placeholder="password">
+        <br>
+        <br>
+        <input type="submit" class = 'btn btn-primary'value="Submit">
+    </form>
+  </div>
+{% endblock %}
