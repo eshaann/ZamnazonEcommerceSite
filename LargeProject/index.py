@@ -77,7 +77,7 @@ def postproduct():
         accesscode = form.accesscode.data
         #filename = secure_filename(form.file.data.filename)
         filename = secure_filename(str(uuid.uuid1())+".jpg")
-        form.file.data.save('C:/Users/naire/Downloads/Flask-Bootcamp-master/Flask-Bootcamp-master/LargeProject/static/' + filename)
+        form.file.data.save('your_folder_path/LargeProject/static/' + filename)
         new_product = Products(name, shoetype, condition, description, size, gender, price, filename, contact, accesscode, quantity)
         db.session.add(new_product)
         db.session.commit()
@@ -179,7 +179,7 @@ def editproduct():
         contact = form.contact.data
         prodaccesscode = form.accesscode.data
         filename = secure_filename(str(uuid.uuid1())+".jpg")
-        form.file.data.save('C:/Users/naire/Downloads/Flask-Bootcamp-master/Flask-Bootcamp-master/LargeProject/static/' + filename)
+        form.file.data.save('your_folder_path/LargeProject/static/' + filename)
         product = Products.query.filter_by(accesscode = prodaccesscode).first()
         if product is not None:
             product.name = name
